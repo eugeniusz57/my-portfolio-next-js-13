@@ -8,20 +8,24 @@ import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 interface NavItem {
+  id: number;
   label: string;
   page: string;
 }
 
 const NavItems: Array<NavItem> = [
   {
+    id: 1,
     label: "Home",
     page: "home",
   },
   {
+    id: 2,
     label: "About",
     page: "about",
   },
   {
+    id: 3,
     label: "Projects",
     page: "projects",
   },
@@ -37,7 +41,15 @@ const NavBar = () => {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link to="home">
+            <Link
+              to="home"
+              className="cursor-pointer"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               <div className="container flex items-center space-x-2">
                 <h2 className="text-2xl font-bold">Yevhenii Kavetskyi</h2>
               </div>
@@ -64,11 +76,11 @@ const NavBar = () => {
             }`}
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {NavItems.map((item) => {
+              {NavItems.map(({ label, page, id }) => {
                 return (
                   <Link
-                    key={item.label}
-                    to={item.page}
+                    key={id}
+                    to={page}
                     className={
                       "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
                     }
@@ -79,7 +91,7 @@ const NavBar = () => {
                     duration={500}
                     onClick={() => setIsOpenNavBar(!isOpenNavBar)}
                   >
-                    {item.label}
+                    {label}
                   </Link>
                 );
               })}
