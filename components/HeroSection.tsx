@@ -4,19 +4,18 @@ import React from "react";
 import { Link } from "react-scroll";
 import { HiArrowDown } from "react-icons/hi";
 
-type Props = {};
-
-const HeroSection = (props: Props) => {
+const HeroSection = () => {
   return (
     <section id="home">
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-24 md:py-32 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-1/2">
           <Image
             src="/profile-image.jpg"
-            alt=""
+            alt="profile photo"
             width={325}
-            height={325}
+            height={525}
             className="rounded-full shadow-2xl"
+            priority={true}
           />
         </div>
         <div className="md:mt-2 md:w-3/5">

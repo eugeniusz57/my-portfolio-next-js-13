@@ -1,44 +1,6 @@
 "use client";
 import React from "react";
-import { SiHtml5, SiNextdotjs, SiTailwindcss, SiExpress } from "react-icons/si";
-import {
-  BiLogoCss3,
-  BiLogoTypescript,
-  BiLogoReact,
-  BiLogoGithub,
-  BiGitBranch,
-  BiLogoNodejs,
-  BiLogoMongodb,
-  BiLogoRedux,
-} from "react-icons/bi";
-import { BsFiletypeScss } from "react-icons/bs";
-import { TbBrandJavascript, TbApi } from "react-icons/tb";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { DiScrum } from "react-icons/di";
-
-const skills = [
-  { id: 1, skill: "HTML", icon: <SiHtml5 size={20} /> },
-  { id: 2, skill: "CSS", icon: <BiLogoCss3 size={20} /> },
-  { id: 3, skill: "SCSS", icon: <BsFiletypeScss size={20} /> },
-  {
-    id: 4,
-    skill: "Responsive / Adaptive Design",
-    icon: <MdOutlineDesignServices size={20} />,
-  },
-  { id: 5, skill: "JavaScript", icon: <TbBrandJavascript size={20} /> },
-  { id: 6, skill: "REST API", icon: <TbApi size={20} /> },
-  { id: 7, skill: "TypeScript", icon: <BiLogoTypescript size={20} /> },
-  { id: 8, skill: "React", icon: <BiLogoReact size={20} /> },
-  { id: 9, skill: "Next.js", icon: <SiNextdotjs size={20} /> },
-  { id: 10, skill: "Tailwind CSS", icon: <SiTailwindcss size={20} /> },
-  { id: 11, skill: "Git", icon: <BiGitBranch size={20} /> },
-  { id: 12, skill: "GitHub", icon: <BiLogoGithub size={20} /> },
-  { id: 13, skill: "Node.Js", icon: <BiLogoNodejs size={20} /> },
-  { id: 14, skill: "Express", icon: <SiExpress size={20} /> },
-  { id: 15, skill: "MongoDB", icon: <BiLogoMongodb size={20} /> },
-  { id: 16, skill: "Scrum / Agile", icon: <DiScrum size={20} /> },
-  { id: 17, skill: "Redux", icon: <BiLogoRedux size={20} /> },
-];
+import { skillsArray } from "../data/skills";
 
 const AboutSection = () => {
   return (
@@ -88,7 +50,7 @@ const AboutSection = () => {
           <div className="text-center md:w-1/2 md:text-left">
             <h3 className="text-2xl font-bold mb-6">My Skills</h3>
             <ul className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map(({ id, skill, icon }) => {
+              {skillsArray.map(({ id, skill, icon }) => {
                 return (
                   <li
                     className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold flex justify-center align-middle"

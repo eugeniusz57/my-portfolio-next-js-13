@@ -6,30 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-
-interface NavItem {
-  id: number;
-  label: string;
-  page: string;
-}
-
-const NavItems: Array<NavItem> = [
-  {
-    id: 1,
-    label: "Home",
-    page: "home",
-  },
-  {
-    id: 2,
-    label: "About",
-    page: "about",
-  },
-  {
-    id: 3,
-    label: "Projects",
-    page: "projects",
-  },
-];
+import { navItems } from "@/data/navItems";
 
 const NavBar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -76,7 +53,7 @@ const NavBar = () => {
             }`}
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {NavItems.map(({ label, page, id }) => {
+              {navItems.map(({ label, page, id }) => {
                 return (
                   <Link
                     key={id}

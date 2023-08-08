@@ -1,4 +1,4 @@
-"use client";
+"use client"; // this is a client component
 import NavBar from "@/components/NavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";

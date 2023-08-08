@@ -1,4 +1,14 @@
-export const projectsArray = [
+interface IProjects { 
+  id: number;
+    name: string;
+    description: string;
+    role: string;
+    image: string;
+    github: string;
+    link: string;
+}
+
+export const projectsArray: IProjects[] = [
   {
     id: 1,
     name: "Phonebook",
