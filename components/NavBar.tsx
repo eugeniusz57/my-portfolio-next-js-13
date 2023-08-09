@@ -15,9 +15,9 @@ const NavBar = () => {
 
   return (
     <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
-      <div className="justify-between md:items-center md:flex">
+      <div className="justify-between md:items-center md:flex ">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <div className="flex items-center justify-between   md:block">
             <Link
               to="home"
               className="cursor-pointer"
@@ -28,7 +28,9 @@ const NavBar = () => {
               duration={500}
             >
               <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Yevhenii Kavetskyi</h2>
+                <h2 className="text-2xl font-bold hover:text-gray-700 py-5">
+                  Yevhenii Kavetskyi
+                </h2>
               </div>
             </Link>
             <div className="md:hidden">
@@ -48,7 +50,7 @@ const NavBar = () => {
 
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`flex-1 justify-self-center  mt-8 md:block md:pb-0 md:mt-0 ${
               isOpenNavBar ? "block" : "hidden"
             }`}
           >
@@ -59,7 +61,7 @@ const NavBar = () => {
                     key={id}
                     to={page}
                     className={
-                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
+                      "block lg:inline-block text-neutral-900 py-5 hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
                     }
                     activeClass="active"
                     spy={true}
