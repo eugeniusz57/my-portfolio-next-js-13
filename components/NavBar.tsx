@@ -50,18 +50,18 @@ const NavBar = () => {
 
         <div>
           <div
-            className={`flex-1 justify-self-center  mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`flex-1 justify-self-center py-4  mt-8 md:block md:pb-0 md:mt-0 ${
               isOpenNavBar ? "block" : "hidden"
             }`}
           >
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <div className="items-center justify-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navItems.map(({ label, page, id }) => {
                 return (
                   <Link
                     key={id}
                     to={page}
                     className={
-                      "block lg:inline-block text-neutral-900 py-5 hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
+                      "block lg:inline-block text-neutral-900 py-2 md:py-5 hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
                     }
                     activeClass="active"
                     spy={true}
