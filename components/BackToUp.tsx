@@ -5,7 +5,7 @@ import { FaChevronUp } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 const BackToUp = () => {
-  const [isActive, setIsActive] = useState();
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
